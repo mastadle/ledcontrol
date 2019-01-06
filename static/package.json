@@ -1,0 +1,32 @@
+{
+	"name": "ledcontrol",
+	"version": "0.1.0",
+	"description": "Stadler PI interface",
+	"main": "js/index.jsx",
+	"scripts": {
+		"start": "parcel index.html",
+		"build": "parcel build index.html",
+		"test": "echo \"Error no test\"; exit 1"
+	},
+	"author": "Martin Stadler",
+	"license": "GPL-3.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/doublesack/ledcontrol"
+	},
+	"devDependencies": {
+		"parcel": "^1.10.0"
+	},
+	"dependencies": {
+		"axios": "^0.18.0",
+		"bootstrap": "^4.0.0",
+		"build-url": "^1.2.0",
+		"jquery": "^3.3.0",
+		"popper.js": "^1.14.0",
+		"react": "^16.7.0",
+		"react-dom": "^16.7.0",
+		"reactstrap": "^6.3.0",
+		"socket.io-client": "^2.0.0",
+		"swagger-ui": "^3.20.4"
+	}
+}
