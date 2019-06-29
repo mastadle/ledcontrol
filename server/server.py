@@ -43,12 +43,12 @@ def send_ir_command():
 
 @app.route('/wake')
 def wake():
-    return '', 200
+    return flask.send_from_directory('../static/dist', 'index.html')
 
 
 @app.route('/sleep')
 def sleep():
-    return '', 200
+    return flask.send_from_directory('../static/dist', 'index.html')
 
 
 @app.route('/keys')
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     for key_raw in keys_list:
         key_name = key_raw.split(' ')
         if len(key_name) > 1:
-            key = {"id": int(key_name[0]),
+            key = {"id": int(key_name[0], 16),
                    "name": (key_name[1])[4:]}
             available_keys.append(key)
             available_keys_names.append(key['name'])

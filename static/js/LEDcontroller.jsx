@@ -28,17 +28,27 @@ export default class LEDcontrol extends React.Component {
 		}
 	}
 
+	getName(key) {
+		if (key.name.substring(0,2) == "BR") {
+			return key.name.substring(10).toLowerCase()
+		} else {
+			return key.name.toLowerCase()
+		}
+	}
+
 	render() {
 		// console.log(this.state.keys);
 		const key_gen = this.state.keys.map(key => (
-			<div key={key.id}>
-				<button onClick={(ev) => this.sendKey(key.name)}>{key.name}</button>
-			</div>
+			<button  key={key.id}
+				type="button" className="btn btn-dark col-md-2 ml-4 mb-3"
+				onClick={(ev) => this.sendKey(key.name)}>
+				{this.getName(key)}
+			</button>
 		));
 
 		return (
 			<div className="container">
-				<div className="row-3">
+				<div className="row col-md-10">
 					{key_gen}
 				</div>
 			</div>

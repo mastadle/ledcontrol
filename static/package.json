@@ -15,18 +15,18 @@
 		"url": "https://github.com/doublesack/ledcontrol"
 	},
 	"devDependencies": {
-		"parcel": "^1.10.0"
+		"parcel": "^1.12.3"
 	},
 	"dependencies": {
-		"axios": "^0.18.0",
-		"bootstrap": "^4.0.0",
-		"build-url": "^1.2.0",
-		"jquery": "^3.3.0",
-		"popper.js": "^1.14.0",
-		"react": "^16.7.0",
-		"react-dom": "^16.7.0",
+		"axios": "^0.18.1",
+		"bootstrap": "^4.3.1",
+		"build-url": "^1.3.3",
+		"jquery": "^3.4.1",
+		"popper.js": "^1.15.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
 		"reactstrap": "^6.3.0",
 		"socket.io-client": "^2.0.0",
-		"swagger-ui": "^3.20.4"
+		"swagger-ui": "^3.22.3"
 	}
 }
