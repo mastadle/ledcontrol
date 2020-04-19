@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import flask
 import flask_cors
 import flask_socketio
@@ -34,7 +36,7 @@ def send_ir_command():
     for command in commands:
         key_s = str(command['key'])
         if key_s in available_keys_names:
-            subprocess.run(['irsend', 'SEND_ONCE',
+            subprocess.run(['irsend', '--device=/home/doublesack/.cache/lirc/lircd', 'SEND_ONCE',
                            remotename, 'KEY_' + key_s],
                            check=True, text=True)
 
@@ -57,7 +59,7 @@ def get_keys():
 
 
 if __name__ == '__main__':
-    raw_keys_s = subprocess.run(['irsend', 'LIST', remotename, ''],
+    raw_keys_s = subprocess.run(['irsend', '--device=/home/doublesack/.cache/lirc/lircd', 'LIST', remotename, ''],
                                 check=True, text=True,
                                 stdout=subprocess.PIPE)
     keys_list = raw_keys_s.stdout.split('\n')
