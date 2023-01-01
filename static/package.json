@@ -15,7 +15,7 @@
 		"url": "https://github.com/doublesack/ledcontrol"
 	},
 	"devDependencies": {
-		"parcel": "^1.12.4"
+		"parcel": "^2.8.2"
 	},
 	"dependencies": {
 		"axios": "^0.18.1",
